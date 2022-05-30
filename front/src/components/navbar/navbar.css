@@ -1,0 +1,24 @@
+.container {
+    background-color: rgb(19, 19, 19);
+    width: 4rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.item {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.dropdown-container {
+    position: absolute;
+    top: 0.4rem;
+    left: 4.5rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    width: 10rem;
+}

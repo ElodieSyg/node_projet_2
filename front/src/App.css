@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.global-container {
+  padding-top: 1rem;
+  margin-left: 7rem;
+  height: 100vh;
+}

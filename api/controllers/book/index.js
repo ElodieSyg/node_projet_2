@@ -2,7 +2,7 @@ const Book = require('../../models/book');
 
 module.exports = {
     get: async (req, res) => {
-        const books = await Book.find();
+        const books = await Book.find().populate('author');
 
         if (!books) {
             return res.status(404).json({
@@ -70,9 +70,9 @@ module.exports = {
     getOne: async (req, res) => {
         const { id } = req.params;
 
-        const book = await Book.findById({ _id: id });
+        const books = await Book.find({ author: id });
 
-        if (!book) {
+        if (!books) {
             return res.status(404).json({
                 message: 'book not found',
                 status: 'failed',
@@ -82,7 +82,7 @@ module.exports = {
 
         return res.status(200).json({
             status: 'success',
-            data: book,
+            data: books,
         });
     },
     delete: async (req, res) => {

@@ -1,0 +1,13 @@
+SECONDE PROJET DE COURS :
+
+Pour lancer l'application, il faut dans un premier temps lancer le backend puis le frontend, merci de suivre les commandes indiquées :
+
+$ cd api
+$ npm install
+$ nodemon
+
+$ cd front
+$ yarn
+$ yarn start
+
+Bonne visualisation ! :)

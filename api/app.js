@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const cors = require('cors');
 dotenv.config({
   path: '.env',
 });
@@ -25,6 +26,13 @@ mongoose
 
 // view engine setup
 app.set('view engine', 'jade');
+
+app.use(
+  cors({
+    credentials: true,
+    origin: 'http://localhost:3001',
+  }),
+);
 
 app.use(logger('dev'));
 app.use(express.json());
